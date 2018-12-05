@@ -32,10 +32,8 @@ fn main() {
 
     let mut seen: Vec<isize> = Vec::new();
     let first_repeat = partial_sums.clone().find(|&x| {
-        println!("Partial: {:?}", seen);
         let result = seen.contains(&x);
         seen.push(x);
-        println!("Seen: {:?}", seen);
         result
     }).unwrap();
     println!("First repetition is {}", first_repeat)
